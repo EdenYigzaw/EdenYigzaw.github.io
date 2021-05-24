@@ -1,17 +1,99 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset = “utf-8”>
-		<title>Q3</title>
+		<meta charset="utf-8">		
+		<link href="styles/styles.css" rel="stylesheet" type="text/css">
+		<title>LabOne: Kijiji Survey</title>
 	</head>
 	<body>
-		<h1>My Favorite Daily Deals Websites.</h1>
-    	<p>
-	    	<a href="https://www.groupon.com/">Groupon</a><br>
-	   		<a href="https://www.livingsocial.com/">LivingSocial</a><br>
-	   		<a href="https://www.newegg.com/">Newegg</a><br>
-	   		<a href="https://www.overstock.com/">Overstock</a><br>
-		   	<a href="https://www.patpat.com/">PatPat</a><br>
-    	</p>	
+		<h1>Kijiji Survey Form</h1>
+		<form method = "post">
+			<!--Intro-->
+			<h3>What do you think of <a href="http://Kijiji.ca">Kijiji's</a> UI?</h3>
+			<!--Display Image-->
+			<a href="http://Kijiji.ca">
+				<img src="images/Kijiji.JPG" alt="http://Kijiji.ca" class="container">
+			</a>
+			
+			<!--Question One-->
+			<div>
+				<strong>What is your opinion on the layout of information on the website?</strong><br>
+				<input type="radio" name="used" value="yes">
+					<label>Very well put together</label>
+				</input><br>
+				<input type="radio" name="used" value="no">
+					<label>Put together</label>
+				</input><br>
+				<input type="radio" name="used" value="no">
+					<label>No opinion</label>
+				</input><br>		
+				<input type="radio" name="used" value="no">
+					<label>Not put together</label>
+				</input><br>
+				<input type="radio" name="used" value="no">
+					<label>Very badly put together</label>
+				</input>						
+			</div>
+			<!--Question Two-->
+			<div>
+				<strong>Which UI goals do you think have been met?</strong><br>
+				<input type="checkbox" name="uiAspects" value="campus"> 
+					<label>Proper functionality</label>
+				</input><br>
+				<input type="checkbox" name="uiGoals" value="consistency">
+					<label>Consistency</label>
+				</input><br>
+				<input type="checkbox" name="uiGoals" value="efficiency">
+					<label>Efficiency</label>
+				</input><br>
+				<input type="checkbox" name="uiGoals" value="usability">
+					<label>Usability</label>
+				</input><br>
+				<input type="checkbox" name="uiGoals" value="reliability">
+					<label>Reliability</label>
+				</input><br>
+				<input type="checkbox" name="uiGoals" value="securityAndDataIntegrity">
+					<label>Security and Data integrity</label>
+				</input>
+			</div>
+			<!--Question Three-->
+			<div>
+				<label> 
+					<strong>What is feature(s) that you think should be added/modified:</strong>
+					<textarea type="text" name="firstName" maxlength="100" rows="2" cols="67">Enter comments here.
+					</textarea>
+				</label>
+			</div>
+			<!--Question Four-->
+			<div>
+				<label for="rank"> 
+					<strong>Overall how many starts would you give this UI</strong></label>
+						<select id="rank" name="rank">
+							<option value="blank"></option>
+							<option value="fiveStars">5 Stars</option>
+							<option value="fourStars">4 Stars</option>
+							<option value="threeStars">3 Stars</option>
+							<option value="twoStars">2 Stars</option>
+							<option value="oneStar">1 Star</option>
+						</select>	
+			</div>
+			<!--Question Five-->
+			<div>
+				<label><strong>Additional Comments:</strong> <br>
+					<textarea name="comments" rows="4" cols="67">Enter comments here.
+					</textarea>
+				</label>
+			</div>
+			<!--Controls-->
+			<p>
+				<button>
+					<strong>SUBMIT FORM</strong>
+				</button>
+			</p>
+			<!--Footer-->
+			<footer>
+				<p>Created by: Eden Yigzaw<br>
+			</footer>
+		</form>
 	</body>
 </html>
