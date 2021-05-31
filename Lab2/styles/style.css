@@ -25,6 +25,8 @@
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: red;
+    border-radius: 5px;
+
 }
 
 /* Create an active/current tablink class */
@@ -40,8 +42,7 @@
   border-top: none;
   margin-left: auto;
   margin-right: auto;
-    width: 30%;
-
+  width: 30%;
 }
 
 /*/////////////////////////////////////////////*/
