@@ -5,21 +5,73 @@
 var products = [
 	{
 		name: "brocoli",
-		vegetarian: true,
-		glutenFree: true,
+		lactoseFree: true,
+		nutFree: true,
+		organic: true,
 		price: 1.99
 	},
 	{
 		name: "bread",
-		vegetarian: true,
-		glutenFree: false,
+		lactoseFree: true,
+		nutFree: false,
+		organic: false,
 		price: 2.35
 	},
 	{
 		name: "salmon",
-		vegetarian: false,
-		glutenFree: true,
+		lactoseFree: true,
+		nutFree: true,
+		organic: true,
 		price: 10.00
+	},
+	{
+		name: "yogurt",
+		lactoseFree: false,
+		nutFree: true,
+		organic: false,
+		price: 1.97
+	},
+	{
+		name: "milk",
+		lactoseFree: false,
+		nutFree: true,
+		organic: true,
+		price: 4.35
+	},
+	{
+		name: "cheese",
+		lactoseFree: false,
+		nutFree: true,
+		organic: false,
+		price: 6.40
+	},
+	{
+		name: "cereal",
+		lactoseFree: false,
+		nutFree: false,
+		organic: false,
+		price: 3.97
+	},
+	{
+		name: "cookies",
+		lactoseFree: false,
+		nutFree: false,
+		organic: false,
+		price: 2.50
+	},
+	{
+		name: "apples",
+		lactoseFree: true,
+		nutFree: true,
+		organic: true,
+		price: 1.97
+	},
+	{
+		name: "juice",
+		lactoseFree: true,
+		nutFree: true,
+		organic: true,
+		price: 2.75
 	}
 ];
 	
@@ -28,19 +80,24 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(prods, lactoseFree, nutFree, organic) {
 	let product_names = [];
+
+	prods.sort(function(a, b){return a.price - b.price});
+
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+		if (lactoseFree && !(prods[i].lactoseFree == lactoseFree)){
+			continue;
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
+		if (nutFree && !(prods[i].nutFree == nutFree)){
+			continue;
 		}
-		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+		if (organic && !(prods[i].organic == organic)){
+			continue;
 		}
+		product_names.push(prods[i].name  + " - $" + prods[i].price);
 	}
+
 	return product_names;
 }
 
@@ -48,9 +105,13 @@ function restrictListProducts(prods, restriction) {
 function getTotalPrice(chosenProducts) {
 	totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
-		if (chosenProducts.indexOf(products[i].name) > -1){
-			totalPrice += products[i].price;
+		for (let a=0; a<chosenProducts.length; a+=1) {
+			if (chosenProducts[a].includes(products[i].name)){
+				totalPrice += products[i].price;
+			}
 		}
 	}
 	return totalPrice;
+
+
 }

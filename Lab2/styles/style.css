@@ -4,7 +4,11 @@
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #fee600;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -20,13 +24,13 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: red;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+/*.tab button.active {
   background-color: #ccc;
-}
+}*/
 
 /* Style the tab content */
 .tabcontent {
@@ -34,4 +38,32 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  margin-left: auto;
+  margin-right: auto;
+    width: 30%;
+
+}
+
+/*/////////////////////////////////////////////*/
+div{
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+h1 {
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  border-radius: 10px;
+  border-color: black;
+  color: black;
+}
+body{
+   background-color: white;
+}
+footer{
+  color: black;
+  text-align: center;
+}
+a{
+  color: red;
 }
