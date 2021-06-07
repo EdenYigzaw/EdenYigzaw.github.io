@@ -50,7 +50,6 @@ function populateListProductChoices() {
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
-		checkbox.class = "container";
 		checkbox.name = "product";
 		checkbox.value = productName;
 		s.appendChild(checkbox);
