@@ -96,14 +96,22 @@
 			                  <div class = "form-group">Enter Email:
 			                        <input type = "text" name = "name" class = "form-control"/>
 			                  </div><br>
-			                  <div class = "form-group">Select a Service:
-			                        <select class="form-select" >
-			                            <option selected value="1">General Checkup</option>
-			                            <option value="2">Vaccinations</option>
-			                            <option value="3">Spaying & Neutering</option>
-			                            <option value="4">Dental Services</option>
-			                            <option value="5">Microchipping</option>
-			                        </select>
+			                  <div class = "form-group">Select a Service:<br>
+			                        <input type="checkbox" name="services" value="generalCheckup">
+										<label>General Checkup</label>
+									</input><br>
+									<input type="checkbox" name="services" value="vaccinations">
+										<label>Vaccinations</label>
+									</input><br>
+									<input type="checkbox" name="services" value="spayingNeutering">
+										<label>Spaying & Neutering</label>
+									</input><br>
+									<input type="checkbox" name="services" value="dentalServices">
+										<label>Dental Services</label>
+									</input><br>
+									<input type="checkbox" name="services" value="microchipping">
+										<label>Microchipping</label>
+									</input><br>
 			                  </div><br>
 			                  <div class = "form-group">Book a timeslot (date and time):
 			                        <input type="datetime-local" id="appointmentDate" name="appointmentDate" class = "form-control">
@@ -134,21 +142,21 @@
 							  <img class="card-img-top" src="images/vet1" alt="Card image cap">
 							  <div class="card-body">
 							    <h5 class="card-title">Sam Iluju</h5>
-							    <p class="card-text">University of Toronto 2015 graduate.
+							    <p class="card-text">Sam Iluju is a University of Toronto 2015 graduate. She specializes in dental services.
 							  </div>
 							</div>
 							<div class="card" style="width: 18rem;">
 							  <img class="card-img-top" src="images/vet2" alt="Card image cap">
 							  <div class="card-body">
 							    <h5 class="card-title">Agetha Lee</h5>
-							    <p class="card-text">University of Ottawa 2010 graduate.</p>
+							    <p class="card-text">Agetha Lee is a University of Ottawa 2010 graduate. She is the owner of the clinic.</p>
 							  </div>
 							</div>
 							<div class="card" style="width: 18rem;">
 							  <img class="card-img-top" src="images/vet4" alt="Card image cap">
 							  <div class="card-body">
 							    <h5 class="card-title">John Forward</h5>
-							    <p class="card-text">York University 2006 graduate.</p>
+							    <p class="card-text">John Forward is a York University 2020 graduate. He is currently doing his internship at the clinic</p>
 							  </div>
 							</div>
 						</div>
