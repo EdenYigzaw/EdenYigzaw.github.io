@@ -73,3 +73,34 @@ $('#cvv').on('keypress', function(e){
     e.which == 8 || // delete key
     /[0-9]/.test(String.fromCharCode(e.which)); // numbers
 })
+
+/*///////////////////////////////////////////////////
+Inspired from https://github.com/RyanMatte/Lab5_Starter/blob/main/scripts/service.js
+///////////////////////////////////////////////////*/
+$("#cvv").on("mouseenter", function(){
+    $("#cvv").addClass("showInput");
+});
+
+$("#cvv").on("mouseleave", function(){
+    $("#cvv").removeClass("showInput");
+});
+
+$("#cvv").tooltip({
+    classes: {
+        "ui-tooltip": "highlight"
+    }
+});
+
+$("#ccnum").on("mouseenter", function(){
+    $("#ccnum").addClass("showInput");
+});
+
+$("#ccnum").on("mouseleave", function(){
+    $("#cvv").removeClass("showInput");
+});
+
+$("#ccnum").tooltip({
+    classes: {
+        "ui-tooltip": "highlight"
+    }
+});
